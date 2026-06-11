@@ -1,0 +1,134 @@
+name: coldsmart
+description: "ColdSmart – Intelligent Cold Storage Operating System for Farmers and Enterprises"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: ">=3.19.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # ─── State Management ───────────────────────────────────────────────────────
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  hooks_riverpod: ^2.5.1
+  flutter_hooks: ^0.20.5
+
+  # ─── Code Generation ────────────────────────────────────────────────────────
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+
+  # ─── Navigation ─────────────────────────────────────────────────────────────
+  go_router: ^13.2.0
+
+  # ─── HTTP & Networking ──────────────────────────────────────────────────────
+  dio: ^5.4.3
+  dio_cache_interceptor: ^3.4.4
+  connectivity_plus: ^6.0.3
+  internet_connection_checker_plus: ^2.3.0
+
+  # ─── MQTT ───────────────────────────────────────────────────────────────────
+  mqtt_client: ^10.2.1
+
+  # ─── Local Database (Offline) ────────────────────────────────────────────────
+  drift: ^2.18.0
+  sqlite3_flutter_libs: ^0.5.20
+  path_provider: ^2.1.3
+  path: ^1.9.0
+
+  # ─── Secure Storage ─────────────────────────────────────────────────────────
+  flutter_secure_storage: ^9.0.0
+  encrypt: ^5.0.3
+
+  # ─── Charts & Graphs ────────────────────────────────────────────────────────
+  fl_chart: ^0.68.0
+  syncfusion_flutter_charts: ^25.1.38
+
+  # ─── QR Code ────────────────────────────────────────────────────────────────
+  mobile_scanner: ^5.1.1
+  qr_flutter: ^4.1.0
+
+  # ─── Camera & Bluetooth ─────────────────────────────────────────────────────
+  flutter_blue_plus: ^1.31.15
+  permission_handler: ^11.3.1
+
+  # ─── Notifications ──────────────────────────────────────────────────────────
+  firebase_core: ^3.1.1
+  firebase_messaging: ^15.0.4
+  flutter_local_notifications: ^17.2.1+2
+
+  # ─── UI Components ──────────────────────────────────────────────────────────
+  google_fonts: ^6.2.1
+  shimmer: ^3.0.0
+  lottie: ^3.1.2
+  cached_network_image: ^3.3.1
+  flutter_svg: ^2.0.10+1
+  animations: ^2.0.11
+  fl_animated_linechart: ^1.2.0
+  percent_indicator: ^4.2.3
+  badges: ^3.1.2
+  flutter_staggered_animations: ^1.1.1
+  skeletonizer: ^1.3.0
+
+  # ─── Forms & Validation ─────────────────────────────────────────────────────
+  reactive_forms: ^17.0.1
+  form_validator: ^2.1.1
+
+  # ─── PDF & Export ───────────────────────────────────────────────────────────
+  open_file_plus: ^3.4.1+1
+  share_plus: ^9.0.0
+
+  # ─── Date/Time ──────────────────────────────────────────────────────────────
+  intl: ^0.20.2
+
+  # ─── Utils ──────────────────────────────────────────────────────────────────
+  uuid: ^4.4.0
+  logger: ^2.4.0
+  equatable: ^2.0.5
+  collection: ^1.18.0
+  rxdart: ^0.27.7
+  async: ^2.11.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+  # Code generation
+  build_runner: ^2.4.9
+  riverpod_generator: ^2.4.0
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
+  drift_dev: ^2.18.0
+
+  # Testing
+  mockito: ^5.4.4
+  mocktail: ^1.0.4
+
+flutter:
+  uses-material-design: true
+
+#  assets:
+#    - assets/images/
+#    - assets/icons/
+#    - assets/lottie/
+#    - assets/fonts/
+#
+#  fonts:
+#    - family: Outfit
+#      fonts:
+#        - asset: assets/fonts/Outfit-Regular.ttf
+#        - asset: assets/fonts/Outfit-Medium.ttf
+#          weight: 500
+#        - asset: assets/fonts/Outfit-SemiBold.ttf
+#          weight: 600
+#        - asset: assets/fonts/Outfit-Bold.ttf
+#          weight: 700
+
+dependency_overrides:
+  intl: ^0.20.2
