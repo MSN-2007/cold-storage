@@ -41,8 +41,12 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
   @override
   void dispose() {
     _countdownTimer?.cancel();
-    for (final c in _controllers) c.dispose();
-    for (final f in _focusNodes) f.dispose();
+    for (final c in _controllers) {
+      c.dispose();
+    }
+    for (final f in _focusNodes) {
+      f.dispose();
+    }
     super.dispose();
   }
 
@@ -219,7 +223,9 @@ class _OtpScreenState extends ConsumerState<OtpScreen> {
           SnackBar(content: Text(e.toString()), backgroundColor: CSColors.critical),
         );
         // Clear OTP on failure
-        for (final c in _controllers) c.clear();
+        for (final c in _controllers) {
+          c.clear();
+        }
         _focusNodes[0].requestFocus();
       }
     } finally {

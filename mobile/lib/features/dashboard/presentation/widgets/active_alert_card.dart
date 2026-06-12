@@ -21,7 +21,7 @@ class ActiveAlertCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: color.withOpacity(0.2)),
+        border: Border.all(color: color.withValues(alpha: 0.2)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,7 +66,7 @@ class ActiveAlertCard extends StatelessWidget {
           OutlinedButton(
             onPressed: onTap,
             style: OutlinedButton.styleFrom(
-              side: BorderSide(color: color.withOpacity(0.5)),
+              side: BorderSide(color: color.withValues(alpha: 0.5)),
               foregroundColor: color,
               backgroundColor: CSColors.surfaceLight,
               shape: const StadiumBorder(),

@@ -105,7 +105,7 @@ class _OtaScreenState extends ConsumerState<OtaScreen> {
 
             // Select firmware Dropdown
             DropdownButtonFormField<String>(
-              value: _selectedFirmware,
+              initialValue: _selectedFirmware,
               decoration: const InputDecoration(
                 labelText: 'Target Firmware Release',
                 border: OutlineInputBorder(),

@@ -136,7 +136,7 @@ class GoodsScreen extends ConsumerWidget {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.inventory_2_outlined, size: 64, color: theme.colorScheme.primary.withOpacity(0.5)),
+                              Icon(Icons.inventory_2_outlined, size: 64, color: theme.colorScheme.primary.withValues(alpha: 0.5)),
                               const SizedBox(height: 16),
                               Text(
                                 'No inventory batches in storage.',
@@ -283,7 +283,7 @@ class GoodsScreen extends ConsumerWidget {
         Text(
           label,
           style: theme.textTheme.bodySmall?.copyWith(
-            color: theme.colorScheme.onPrimaryContainer.withOpacity(0.7),
+            color: theme.colorScheme.onPrimaryContainer.withValues(alpha: 0.7),
           ),
         ),
         const SizedBox(height: 4),

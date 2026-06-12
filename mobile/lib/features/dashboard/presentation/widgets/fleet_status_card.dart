@@ -25,7 +25,7 @@ class FleetStatusRow extends StatelessWidget {
         spacing: 16,
         runSpacing: 16,
         children: [
-          _buildCard(context, total, 'Total Storages', 'All your cold storages', CSColors.accent, CSColors.accentLight.withOpacity(0.2), Icons.inventory_2_outlined),
+          _buildCard(context, total, 'Total Storages', 'All your cold storages', CSColors.accent, CSColors.accentLight.withValues(alpha: 0.2), Icons.inventory_2_outlined),
           _buildCard(context, healthy, 'Healthy', 'Working fine', CSColors.success, CSColors.successLight, Icons.check_circle_outline),
           _buildCard(context, warning, 'Warning', 'Needs attention', CSColors.warning, CSColors.warningLight, Icons.warning_amber_rounded),
           _buildCard(context, critical, 'Critical', 'Immediate action', CSColors.critical, CSColors.criticalLight, Icons.water_drop_outlined),

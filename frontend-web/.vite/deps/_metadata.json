@@ -1,0 +1,38 @@
+{
+  "hash": "28af8337",
+  "configHash": "86c34aca",
+  "lockfileHash": "515c2c6e",
+  "browserHash": "8d3bc2ea",
+  "optimized": {
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "file": "lucide-react.js",
+      "fileHash": "f023a5ac",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "40f7410a",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "f54137ac",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "30bcf55e",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "react-CHGKtqJi": {
+      "file": "react-CHGKtqJi.js",
+      "isDynamicEntry": false
+    }
+  }
+}

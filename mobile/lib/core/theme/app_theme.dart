@@ -226,21 +226,21 @@ class CSShadows {
   CSShadows._();
 
   static List<BoxShadow> get card => [
-    BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 16, offset: const Offset(0, 4)),
-    BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 4, offset: const Offset(0, 1)),
+    BoxShadow(color: Colors.black.withValues(alpha: 0.3), blurRadius: 16, offset: const Offset(0, 4)),
+    BoxShadow(color: Colors.black.withValues(alpha: 0.1), blurRadius: 4, offset: const Offset(0, 1)),
   ];
 
   static List<BoxShadow> get cardLight => [
-    BoxShadow(color: const Color(0xFF0F172A).withOpacity(0.05), blurRadius: 10, offset: const Offset(0, 4)),
-    BoxShadow(color: const Color(0xFF0F172A).withOpacity(0.02), blurRadius: 4, offset: const Offset(0, 2)),
+    BoxShadow(color: const Color(0xFF0F172A).withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, 4)),
+    BoxShadow(color: const Color(0xFF0F172A).withValues(alpha: 0.02), blurRadius: 4, offset: const Offset(0, 2)),
   ];
 
   static List<BoxShadow> glow(Color color) => [
-    BoxShadow(color: color.withOpacity(0.3), blurRadius: 20, spreadRadius: 0),
+    BoxShadow(color: color.withValues(alpha: 0.3), blurRadius: 20, spreadRadius: 0),
   ];
 
   static List<BoxShadow> get elevated => [
-    BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 24, offset: const Offset(0, 8)),
+    BoxShadow(color: Colors.black.withValues(alpha: 0.4), blurRadius: 24, offset: const Offset(0, 8)),
   ];
 }
 
@@ -253,15 +253,13 @@ class CSTheme {
   static ThemeData get light => ThemeData(
     useMaterial3: true,
     brightness: Brightness.light,
-    colorScheme: ColorScheme.light(
+    colorScheme: const ColorScheme.light(
       primary: CSColors.accent,
       onPrimary: Colors.white,
       secondary: CSColors.primary,
       surface: CSColors.surfaceLight,
-      background: CSColors.backgroundLight,
       error: CSColors.critical,
       onSurface: CSColors.textPrimaryLight,
-      onBackground: CSColors.textPrimaryLight,
     ),
     scaffoldBackgroundColor: CSColors.backgroundLight,
     cardColor: CSColors.cardLight,
@@ -310,21 +308,21 @@ class CSTheme {
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: CSColors.surfaceLight,
-      border: OutlineInputBorder(
+      border: const OutlineInputBorder(
         borderRadius: CSRadius.cardBorder,
-        borderSide: const BorderSide(color: CSColors.borderLight),
+        borderSide: BorderSide(color: CSColors.borderLight),
       ),
-      enabledBorder: OutlineInputBorder(
+      enabledBorder: const OutlineInputBorder(
         borderRadius: CSRadius.cardBorder,
-        borderSide: const BorderSide(color: CSColors.borderLight),
+        borderSide: BorderSide(color: CSColors.borderLight),
       ),
-      focusedBorder: OutlineInputBorder(
+      focusedBorder: const OutlineInputBorder(
         borderRadius: CSRadius.cardBorder,
-        borderSide: const BorderSide(color: CSColors.accent, width: 2),
+        borderSide: BorderSide(color: CSColors.accent, width: 2),
       ),
-      errorBorder: OutlineInputBorder(
+      errorBorder: const OutlineInputBorder(
         borderRadius: CSRadius.cardBorder,
-        borderSide: const BorderSide(color: CSColors.critical),
+        borderSide: BorderSide(color: CSColors.critical),
       ),
       labelStyle: CSTextStyles.bodyMedium.copyWith(color: CSColors.textPrimaryLight),
       hintStyle: CSTextStyles.bodyMedium.copyWith(color: CSColors.textDisabledLight),
@@ -343,7 +341,7 @@ class CSTheme {
     ),
     chipTheme: ChipThemeData(
       backgroundColor: CSColors.surfaceLight,
-      selectedColor: CSColors.accent.withOpacity(0.1),
+      selectedColor: CSColors.accent.withValues(alpha: 0.1),
       labelStyle: CSTextStyles.labelMedium.copyWith(color: CSColors.textPrimaryLight),
       shape: const StadiumBorder(side: BorderSide(color: CSColors.borderLight)),
     ),
@@ -358,15 +356,13 @@ class CSTheme {
   static ThemeData get dark => ThemeData(
     useMaterial3: true,
     brightness: Brightness.dark,
-    colorScheme: ColorScheme.dark(
+    colorScheme: const ColorScheme.dark(
       primary: CSColors.accent,
       onPrimary: Colors.white,
       secondary: CSColors.primary,
       surface: CSColors.surfaceDark,
-      background: CSColors.backgroundDark,
       error: CSColors.critical,
       onSurface: CSColors.textPrimary,
-      onBackground: CSColors.textPrimary,
     ),
     scaffoldBackgroundColor: CSColors.backgroundDark,
     cardColor: CSColors.cardDark,
@@ -415,21 +411,21 @@ class CSTheme {
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: CSColors.surfaceDark,
-      border: OutlineInputBorder(
+      border: const OutlineInputBorder(
         borderRadius: CSRadius.cardBorder,
-        borderSide: const BorderSide(color: CSColors.border),
+        borderSide: BorderSide(color: CSColors.border),
       ),
-      enabledBorder: OutlineInputBorder(
+      enabledBorder: const OutlineInputBorder(
         borderRadius: CSRadius.cardBorder,
-        borderSide: const BorderSide(color: CSColors.border),
+        borderSide: BorderSide(color: CSColors.border),
       ),
-      focusedBorder: OutlineInputBorder(
+      focusedBorder: const OutlineInputBorder(
         borderRadius: CSRadius.cardBorder,
-        borderSide: const BorderSide(color: CSColors.accent, width: 2),
+        borderSide: BorderSide(color: CSColors.accent, width: 2),
       ),
-      errorBorder: OutlineInputBorder(
+      errorBorder: const OutlineInputBorder(
         borderRadius: CSRadius.cardBorder,
-        borderSide: const BorderSide(color: CSColors.critical),
+        borderSide: BorderSide(color: CSColors.critical),
       ),
       labelStyle: CSTextStyles.bodyMedium.copyWith(color: CSColors.textPrimary),
       hintStyle: CSTextStyles.bodyMedium.copyWith(color: CSColors.textDisabled),
@@ -448,7 +444,7 @@ class CSTheme {
     ),
     chipTheme: ChipThemeData(
       backgroundColor: CSColors.surfaceDark,
-      selectedColor: CSColors.accent.withOpacity(0.2),
+      selectedColor: CSColors.accent.withValues(alpha: 0.2),
       labelStyle: CSTextStyles.labelMedium.copyWith(color: CSColors.textPrimary),
       shape: const StadiumBorder(side: BorderSide(color: CSColors.border)),
     ),

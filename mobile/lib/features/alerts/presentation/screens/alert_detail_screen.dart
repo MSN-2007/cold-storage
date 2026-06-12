@@ -84,9 +84,9 @@ class _AlertDetailScreenState extends ConsumerState<AlertDetailScreen> {
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: severityColor.withOpacity(0.1),
+                    color: severityColor.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: severityColor.withOpacity(0.3)),
+                    border: Border.all(color: severityColor.withValues(alpha: 0.3)),
                   ),
                   child: Row(
                     children: [

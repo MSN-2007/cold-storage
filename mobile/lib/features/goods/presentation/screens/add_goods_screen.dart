@@ -153,7 +153,7 @@ class _AddGoodsScreenState extends ConsumerState<AddGoodsScreen> {
                           Text(
                             'Estimated Shelf Life',
                             style: theme.textTheme.bodySmall?.copyWith(
-                              color: theme.colorScheme.onTertiaryContainer.withOpacity(0.7),
+                              color: theme.colorScheme.onTertiaryContainer.withValues(alpha: 0.7),
                             ),
                           ),
                           const SizedBox(height: 2),
@@ -167,7 +167,7 @@ class _AddGoodsScreenState extends ConsumerState<AddGoodsScreen> {
                           Text(
                             'Calculated using USDA/FAO standard parameters.',
                             style: theme.textTheme.bodySmall?.copyWith(
-                              color: theme.colorScheme.onTertiaryContainer.withOpacity(0.6),
+                              color: theme.colorScheme.onTertiaryContainer.withValues(alpha: 0.6),
                               fontSize: 10,
                             ),
                           ),
@@ -190,7 +190,7 @@ class _AddGoodsScreenState extends ConsumerState<AddGoodsScreen> {
             ),
             const SizedBox(height: 16),
             DropdownButtonFormField<String>(
-              value: _selectedCrop,
+              initialValue: _selectedCrop,
               decoration: const InputDecoration(
                 labelText: 'Produce Category (Crop Profile)',
                 prefixIcon: Icon(Icons.grass),
@@ -206,7 +206,7 @@ class _AddGoodsScreenState extends ConsumerState<AddGoodsScreen> {
             ),
             const SizedBox(height: 16),
             DropdownButtonFormField<String>(
-              value: _selectedChamber,
+              initialValue: _selectedChamber,
               decoration: const InputDecoration(
                 labelText: 'Target Cold Room / Chamber',
                 prefixIcon: Icon(Icons.room),

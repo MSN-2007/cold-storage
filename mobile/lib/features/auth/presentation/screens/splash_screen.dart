@@ -85,7 +85,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                     borderRadius: CSRadius.all(24),
                     boxShadow: [
                       BoxShadow(
-                        color: CSColors.accent.withOpacity(0.4),
+                        color: CSColors.accent.withValues(alpha: 0.4),
                         blurRadius: 40,
                         spreadRadius: 4,
                       ),
@@ -116,7 +116,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                   height: 24,
                   child: CircularProgressIndicator(
                     strokeWidth: 2,
-                    color: CSColors.accent.withOpacity(0.6),
+                    color: CSColors.accent.withValues(alpha: 0.6),
                   ),
                 ),
               ],

@@ -86,7 +86,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                     ),
                     const SizedBox(height: 12),
                     DropdownButtonFormField<String>(
-                      value: _selectedReportType,
+                      initialValue: _selectedReportType,
                       decoration: const InputDecoration(
                         labelText: 'Report Type',
                         border: OutlineInputBorder(),
@@ -107,7 +107,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                     ),
                     const SizedBox(height: 12),
                     DropdownButtonFormField<String>(
-                      value: _selectedFormat,
+                      initialValue: _selectedFormat,
                       decoration: const InputDecoration(
                         labelText: 'Export Format',
                         border: OutlineInputBorder(),
@@ -176,7 +176,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                   margin: const EdgeInsets.only(bottom: 8),
                   child: ListTile(
                     leading: CircleAvatar(
-                      backgroundColor: iconColor.withOpacity(0.1),
+                      backgroundColor: iconColor.withValues(alpha: 0.1),
                       child: Icon(formatIcon, color: iconColor),
                     ),
                     title: Text(r['title'] as String, style: const TextStyle(fontWeight: FontWeight.bold)),

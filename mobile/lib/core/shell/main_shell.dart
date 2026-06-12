@@ -138,7 +138,7 @@ class _Sidebar extends StatelessWidget {
                     icon: const Icon(Icons.add, color: Colors.white),
                     label: const Text('Add Device', style: TextStyle(color: Colors.white)),
                     style: OutlinedButton.styleFrom(
-                      side: BorderSide(color: Colors.white.withOpacity(0.2)),
+                      side: BorderSide(color: Colors.white.withValues(alpha: 0.2)),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       padding: const EdgeInsets.symmetric(vertical: 16),
                     ),
@@ -148,7 +148,7 @@ class _Sidebar extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.05),
+                    color: Colors.white.withValues(alpha: 0.05),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Row(
@@ -206,7 +206,7 @@ class _NavItem extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 8),
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         decoration: BoxDecoration(
-          color: isSelected ? CSColors.primaryLight.withOpacity(0.5) : Colors.transparent,
+          color: isSelected ? CSColors.primaryLight.withValues(alpha: 0.5) : Colors.transparent,
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(

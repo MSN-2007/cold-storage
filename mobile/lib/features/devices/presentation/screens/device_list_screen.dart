@@ -59,7 +59,7 @@ class DeviceListScreen extends ConsumerWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.sensors_off, size: 64, color: theme.colorScheme.primary.withOpacity(0.5)),
+                    Icon(Icons.sensors_off, size: 64, color: theme.colorScheme.primary.withValues(alpha: 0.5)),
                     const SizedBox(height: 16),
                     Text(
                       'No devices paired yet.',
@@ -104,7 +104,7 @@ class DeviceListScreen extends ConsumerWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                     side: BorderSide(
-                      color: statusColor.withOpacity(0.2),
+                      color: statusColor.withValues(alpha: 0.2),
                       width: 1,
                     ),
                   ),
@@ -143,7 +143,7 @@ class DeviceListScreen extends ConsumerWidget {
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 10, vertical: 6),
                                 decoration: BoxDecoration(
-                                  color: statusColor.withOpacity(0.1),
+                                  color: statusColor.withValues(alpha: 0.1),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Row(

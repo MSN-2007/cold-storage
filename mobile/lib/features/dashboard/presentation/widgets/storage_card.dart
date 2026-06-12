@@ -32,14 +32,14 @@ class StorageCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                 decoration: BoxDecoration(
-                  color: statusColor.withOpacity(0.1),
+                  color: statusColor.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: statusColor.withOpacity(0.2)),
+                  border: Border.all(color: statusColor.withValues(alpha: 0.2)),
                 ),
                 child: Text(device.status, style: TextStyle(color: statusColor, fontSize: 10, fontWeight: FontWeight.bold)),
               ),
               const Spacer(),
-              Icon(Icons.domain, color: CSColors.textDisabledLight, size: 28),
+              const Icon(Icons.domain, color: CSColors.textDisabledLight, size: 28),
             ],
           ),
           const SizedBox(height: 8),
@@ -57,7 +57,7 @@ class StorageCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4),
                   child: LinearProgressIndicator(
                     value: overallHealth / 100,
-                    backgroundColor: statusColor.withOpacity(0.2),
+                    backgroundColor: statusColor.withValues(alpha: 0.2),
                     valueColor: AlwaysStoppedAnimation<Color>(statusColor),
                     minHeight: 6,
                   ),
@@ -66,7 +66,7 @@ class StorageCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 24),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               _MetricMini(icon: Icons.thermostat, value: '4.2°C', label: 'Temp', color: CSColors.success),
@@ -79,7 +79,7 @@ class StorageCard extends StatelessWidget {
           Center(
             child: TextButton(
               onPressed: onTap,
-              child: Text('View Details →', style: TextStyle(color: CSColors.accent, fontWeight: FontWeight.bold)),
+              child: const Text('View Details →', style: TextStyle(color: CSColors.accent, fontWeight: FontWeight.bold)),
             ),
           ),
         ],

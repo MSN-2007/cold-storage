@@ -92,13 +92,13 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
 
               // ── Tab Bar ───────────────────────────────────────────────────
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: CSColors.surfaceDark,
                   borderRadius: CSRadius.cardBorder,
                 ),
                 child: TabBar(
                   controller: _tabController,
-                  indicator: BoxDecoration(
+                  indicator: const BoxDecoration(
                     color: CSColors.accent,
                     borderRadius: CSRadius.cardBorder,
                   ),
@@ -157,8 +157,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen>
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: CSColors.accent.withOpacity(0.08),
-                  border: Border.all(color: CSColors.accent.withOpacity(0.3)),
+                  color: CSColors.accent.withValues(alpha: 0.08),
+                  border: Border.all(color: CSColors.accent.withValues(alpha: 0.3)),
                   borderRadius: CSRadius.cardBorder,
                 ),
                 child: Row(

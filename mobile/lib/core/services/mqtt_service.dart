@@ -15,7 +15,7 @@ enum MqttConnectionState {
 @Riverpod(keepAlive: true)
 class MqttService extends _$MqttService {
   final _messageController = StreamController<Map<String, dynamic>>.broadcast();
-  MqttConnectionState _connectionState = MqttConnectionState.disconnected;
+  final MqttConnectionState _connectionState = MqttConnectionState.disconnected;
 
   @override
   MqttConnectionState build() {

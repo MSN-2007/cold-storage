@@ -333,7 +333,7 @@ class _FleetStatusSkeleton extends StatelessWidget {
         children: List.generate(5, (i) => Container(
           width: 200,
           height: 90,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: CSRadius.cardBorder,
           ),
@@ -352,7 +352,7 @@ class _StorageCardSkeleton extends StatelessWidget {
       baseColor: CSColors.borderLight,
       highlightColor: CSColors.surfaceLight,
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: CSRadius.cardBorder,
         ),
@@ -372,8 +372,8 @@ class _ErrorCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: CSColors.criticalLight.withOpacity(0.5),
-        border: Border.all(color: CSColors.critical.withOpacity(0.3)),
+        color: CSColors.criticalLight.withValues(alpha: 0.5),
+        border: Border.all(color: CSColors.critical.withValues(alpha: 0.3)),
         borderRadius: CSRadius.cardBorder,
       ),
       child: Row(

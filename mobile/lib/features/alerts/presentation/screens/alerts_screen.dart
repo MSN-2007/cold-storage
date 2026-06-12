@@ -95,7 +95,7 @@ class _AlertsScreenState extends ConsumerState<AlertsScreen> with SingleTickerPr
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.check_circle_outline, size: 64, color: theme.colorScheme.primary.withOpacity(0.5)),
+            Icon(Icons.check_circle_outline, size: 64, color: theme.colorScheme.primary.withValues(alpha: 0.5)),
             const SizedBox(height: 16),
             Text(
               'All clear! No alerts in this tab.',
@@ -131,12 +131,12 @@ class _AlertsScreenState extends ConsumerState<AlertsScreen> with SingleTickerPr
           margin: const EdgeInsets.only(bottom: 12),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
-            side: BorderSide(color: severityColor.withOpacity(0.3), width: 1),
+            side: BorderSide(color: severityColor.withValues(alpha: 0.3), width: 1),
           ),
           child: ListTile(
             onTap: () => context.go('/alerts/${alert.id}'),
             leading: CircleAvatar(
-              backgroundColor: severityColor.withOpacity(0.1),
+              backgroundColor: severityColor.withValues(alpha: 0.1),
               child: Icon(severityIcon, color: severityColor),
             ),
             title: Text(
